@@ -1,0 +1,458 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Municipality of Bogo, Cebu</title>
+<script src="https://cdn.tailwindcss.com/3.4.16"></script>
+<script>tailwind.config={theme:{extend:{colors:{primary:'#4B9CD3',secondary:'#6c757d'},borderRadius:{'none':'0px','sm':'4px',DEFAULT:'8px','md':'12px','lg':'16px','xl':'20px','2xl':'24px','3xl':'32px','full':'9999px','button':'8px'}}}}</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.6.0/remixicon.min.css">
+<style>
+:where([class^="ri-"])::before { content: "\f3c2"; }
+body {
+font-family: 'Poppins', sans-serif;
+scroll-behavior: smooth;
+}
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+-webkit-appearance: none;
+margin: 0;
+}
+.hero-section {
+background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('https://readdy.ai/api/search-image?query=aerial%20view%20of%20Bogo%20Cebu%20Philippines%20with%20beautiful%20coastal%20scenery%2C%20mountains%20in%20background%2C%20urban%20development%2C%20clear%20blue%20sky%2C%20sunny%20day%2C%20vibrant%20community%2C%20municipal%20buildings%20visible%2C%20high%20resolution%20landscape%20photography&width=1920&height=1080&seq=1&orientation=landscape');
+background-size: cover;
+background-position: center;
+background-repeat: no-repeat;
+}
+.about-image {
+background-image: url('https://readdy.ai/api/search-image?query=modern%20municipal%20hall%20building%20in%20Bogo%20Cebu%20Philippines%2C%20government%20architecture%2C%20clean%20and%20professional%20appearance%2C%20flag%20poles%20in%20front%2C%20well-maintained%20gardens%2C%20blue%20sky%20background%2C%20official%20government%20building%20with%20columns%20and%20Filipino%20architectural%20elements&width=600&height=400&seq=2&orientation=landscape');
+background-size: cover;
+background-position: center;
+}
+.news-card:hover {
+transform: translateY(-5px);
+box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+}
+.mobile-menu {
+transform: translateX(-100%);
+transition: transform 0.3s ease-in-out;
+}
+.mobile-menu.active {
+transform: translateX(0);
+}
+@media (max-width: 768px) {
+.desktop-menu {
+display: none;
+}
+}
+@media (min-width: 769px) {
+.mobile-menu-button {
+display: none;
+}
+}
+</style>
+</head>
+<body class="bg-gray-50">
+<!-- Header/Navigation -->
+<header class="fixed w-full bg-primary shadow-md z-50">
+<div class="container mx-auto px-4 py-3">
+<div class="flex justify-between items-center">
+<div class="flex items-center">
+<h1 class="text-white font-['Pacifico'] text-2xl mr-8"></h1>
+<nav class="desktop-menu">
+<ul class="flex space-x-6">
+<li><a href="#home" class="text-white hover:text-gray-200 font-medium">Home</a></li>
+<li><a href="#about" class="text-white hover:text-gray-200 font-medium">About</a></li>
+<li><a href="#services" class="text-white hover:text-gray-200 font-medium">Official</a></li>
+<li><a href="#news" class="text-white hover:text-gray-200 font-medium">News</a></li>
+<li><a href="#contact" class="text-white hover:text-gray-200 font-medium">Contact</a></li>
+</ul>
+</nav>
+</div>
+<button class="mobile-menu-button w-10 h-10 flex items-center justify-center text-white">
+<i class="ri-menu-line ri-2x"></i>
+</button>
+</div>
+</div>
+</header>
+<!-- Mobile Menu -->
+<div class="mobile-menu fixed top-0 left-0 h-full w-64 bg-primary z-50 shadow-lg p-5">
+<div class="flex justify-between items-center mb-8">
+<h1 class="text-white font-['Pacifico'] text-2xl"></h1>
+<button class="close-menu w-8 h-8 flex items-center justify-center text-white">
+<i class="ri-close-line ri-2x"></i>
+</button>
+</div>
+<nav>
+<ul class="space-y-4">
+<li><a href="#home" class="text-white hover:text-gray-200 font-medium block py-2">Home</a></li>
+<li><a href="#about" class="text-white hover:text-gray-200 font-medium block py-2">About</a></li>
+<li><a href="#services" class="text-white hover:text-gray-200 font-medium block py-2">Official</a></li>
+<li><a href="#news" class="text-white hover:text-gray-200 font-medium block py-2">News</a></li>
+<li><a href="#contact" class="text-white hover:text-gray-200 font-medium block py-2">Contact</a></li>
+</ul>
+</nav>
+</div>
+<!-- Hero Section -->
+<section id="home" class="hero-section h-screen flex items-center pt-16">
+<div class="container mx-auto px-4">
+<div class="max-w-2xl text-white">
+<h1 class="text-4xl md:text-5xl font-bold mb-4">Welcome to the Municipality of Bogo</h1>
+<p class="text-xl mb-8">A progressive coastal municipality in Northern Cebu</p>
+<a href="#about" class="bg-primary hover:bg-blue-600 text-white font-bold py-3 px-6 !rounded-button transition duration-300 whitespace-nowrap">Learn More</a>
+</div>
+</div>
+</section>
+<!-- About Section -->
+<section id="about" class="py-20 bg-gray-100">
+<div class="container mx-auto px-4">
+<h2 class="text-3xl font-bold text-center mb-12 text-gray-800">About Our Municipality</h2>
+<div class="flex flex-col md:flex-row gap-8 items-center">
+<div class="md:w-1/2">
+<h3 class="text-2xl font-semibold mb-4 text-gray-700">Discover Bogo City</h3>
+<p class="text-gray-600 mb-4">Bogo is a coastal municipality located in the northern part of Cebu province, Philippines. Originally known as "Bogo," it was elevated to city status in 2007 but reverted to municipality status in 2013 following a legal ruling.</p>
+<p class="text-gray-600 mb-4">With a rich cultural heritage and strategic location, Bogo serves as a commercial, educational, and healthcare hub for northern Cebu. The municipality is known for its vibrant Pintos Festival, celebrating the local corn-based delicacy.</p>
+<p class="text-gray-600">Today, Bogo continues to develop its infrastructure, tourism potential, and local industries while preserving its cultural identity and natural resources.</p>
+</div>
+<div class="md:w-1/2 h-80 about-image rounded"></div>
+</div>
+</div>
+</section>
+<!-- Municipal Officials Section -->
+<section id="services" class="py-20 bg-gray-50">
+<div class="container mx-auto px-4">
+<h2 class="text-3xl font-bold text-center mb-12 text-gray-800">Municipal Officials</h2>
+<!-- Mayor -->
+<div class="max-w-3xl mx-auto mb-16">
+<div class="bg-white rounded-lg shadow-md overflow-hidden">
+<div class="aspect-w-16 aspect-h-9 h-96">
+<img src="Hon. Carlo Martinez.jpg" alt="Mayor" class="w-full h-full object-cover object-top">
+</div>
+<div class="p-8 text-center">
+<h3 class="text-2xl font-bold text-gray-800 mb-2">Hon. Carlo Martinez</h3>
+<p class="text-primary font-semibold mb-4">Municipal Mayor</p>
+<p class="text-gray-600 max-w-2xl mx-auto">Serving as the Municipal Mayor of Bogo since 2022. Committed to sustainable development, transparent governance, and improving the quality of life for all Bogohanons.</p>
+</div>
+</div>
+</div>
+<!-- Other Officials -->
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+<!-- Vice Mayor -->
+<div class="bg-white rounded-lg shadow-md overflow-hidden">
+<div class="aspect-w-4 aspect-h-3 h-64">
+<img src="Hon. Maria Santos.jpg">
+</div>
+<div class="p-6 text-center">
+<h3 class="text-xl font-bold text-gray-800 mb-2">Hon. Maria Santos</h3>
+<p class="text-primary font-semibold">Municipal Vice Mayor</p>
+</div>
+</div>
+<!-- Secretary -->
+<div class="bg-white rounded-lg shadow-md overflow-hidden">
+<div class="aspect-w-4 aspect-h-3 h-64">
+<img src="Hon. Ramon Reyes.jpg">
+</div>
+<div class="p-6 text-center">
+<h3 class="text-xl font-bold text-gray-800 mb-2">Hon. Ramon Reyes</h3>
+<p class="text-primary font-semibold">Municipal Secretary</p>
+</div>
+</div>
+<!-- Treasurer -->
+<div class="bg-white rounded-lg shadow-md overflow-hidden">
+<div class="aspect-w-4 aspect-h-3 h-64">
+<img src="Municipal Treasurer.jpg">
+</div>
+<div class="p-6 text-center">
+<h3 class="text-xl font-bold text-gray-800 mb-2">Hon. Elena Cruz</h3>
+<p class="text-primary font-semibold">Municipal Treasurer</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- News Section -->
+<section id="news" class="py-20 bg-gray-100">
+<div class="container mx-auto px-4">
+<h2 class="text-3xl font-bold text-center mb-12 text-gray-800">Latest News & Updates</h2>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+<!-- News 1 -->
+<div class="news-card bg-white rounded shadow-md overflow-hidden transition duration-300">
+<div class="h-48 overflow-hidden">
+<img src="https://readdy.ai/api/search-image?query=municipal%20vaccination%20program%20in%20the%20Philippines%2C%20healthcare%20workers%20administering%20vaccines%20to%20citizens%2C%20organized%20medical%20setup%2C%20people%20waiting%20in%20line%2C%20nurses%20in%20PPE%2C%20community%20health%20center%20setting%2C%20professional%20medical%20environment&width=600&height=400&seq=3&orientation=landscape" alt="Vaccination Program" class="w-full h-full object-cover object-top">
+</div>
+<div class="p-6">
+<div class="flex items-center mb-2">
+<span class="text-xs font-medium text-primary bg-primary/10 px-2 py-1 rounded-full">Health</span>
+<span class="text-xs text-gray-500 ml-2">May 19, 2025</span>
+</div>
+<h3 class="text-xl font-semibold mb-2 text-gray-700">COVID-19 Vaccination Drive Continues</h3>
+<p class="text-gray-600 mb-4">The Municipality of Bogo continues its vaccination program, now offering booster shots to eligible residents.</p>
+<a href="#" class="text-primary hover:text-blue-700 font-medium">Read More</a>
+</div>
+</div>
+
+<div class="news-card bg-white rounded shadow-md overflow-hidden transition duration-300">
+<div class="h-48 overflow-hidden">
+<img src="https://readdy.ai/api/search-image?query=Filipino%20municipal%20infrastructure%20project%2C%20road%20construction%20in%20progress%2C%20workers%20in%20safety%20gear%2C%20construction%20equipment%2C%20newly%20paved%20road%2C%20urban%20development%20in%20the%20Philippines%2C%20civil%20engineering%20project&width=600&height=400&seq=4&orientation=landscape" alt="Road Project" class="w-full h-full object-cover object-top">
+</div>
+<div class="p-6">
+<div class="flex items-center mb-2">
+<span class="text-xs font-medium text-primary bg-primary/10 px-2 py-1 rounded-full">Infrastructure</span>
+<span class="text-xs text-gray-500 ml-2">May 15, 2025</span>
+</div>
+<h3 class="text-xl font-semibold mb-2 text-gray-700">New Road Project Completed</h3>
+<p class="text-gray-600 mb-4">The municipality has completed the rehabilitation of the Bogo-Medellin Road, improving transportation for residents.</p>
+<a href="#" class="text-primary hover:text-blue-700 font-medium">Read More</a>
+</div>
+</div>
+<div class="news-card bg-white rounded shadow-md overflow-hidden transition duration-300">
+<div class="h-48 overflow-hidden">
+<img src="https://readdy.ai/api/search-image?query=Filipino%20cultural%20festival%20celebration%2C%20colorful%20traditional%20costumes%2C%20street%20dancing%2C%20parade%20with%20performers%2C%20festive%20atmosphere%2C%20community%20gathering%2C%20cultural%20heritage%20celebration%20in%20the%20Philippines&width=600&height=400&seq=5&orientation=landscape" alt="Pintos Festival" class="w-full h-full object-cover object-top">
+</div>
+<div class="p-6">
+<div class="flex items-center mb-2">
+<span class="text-xs font-medium text-primary bg-primary/10 px-2 py-1 rounded-full">Culture</span>
+<span class="text-xs text-gray-500 ml-2">May 10, 2025</span>
+</div>
+<h3 class="text-xl font-semibold mb-2 text-gray-700">Pintos Festival Preparations Begin</h3>
+<p class="text-gray-600 mb-4">The municipality announces preparations for the annual Pintos Festival, showcasing local culture and traditions.</p>
+<a href="#" class="text-primary hover:text-blue-700 font-medium">Read More</a>
+</div>
+</div>
+</div>
+<div class="flex justify-center mt-10">
+<nav class="flex items-center space-x-2">
+<a href="#" class="w-10 h-10 flex items-center justify-center rounded-full border border-gray-300 text-gray-600 hover:bg-primary hover:text-white hover:border-primary transition duration-300">
+<i class="ri-arrow-left-s-line"></i>
+</a>
+<a href="#" class="w-10 h-10 flex items-center justify-center rounded-full bg-primary text-white">1</a>
+<a href="#" class="w-10 h-10 flex items-center justify-center rounded-full border border-gray-300 text-gray-600 hover:bg-primary hover:text-white hover:border-primary transition duration-300">2</a>
+<a href="#" class="w-10 h-10 flex items-center justify-center rounded-full border border-gray-300 text-gray-600 hover:bg-primary hover:text-white hover:border-primary transition duration-300">3</a>
+<a href="#" class="w-10 h-10 flex items-center justify-center rounded-full border border-gray-300 text-gray-600 hover:bg-primary hover:text-white hover:border-primary transition duration-300">
+<i class="ri-arrow-right-s-line"></i>
+</a>
+</nav>
+</div>
+</div>
+</section>
+<!-- Contact Section -->
+<section id="contact" class="py-20">
+<div class="container mx-auto px-4">
+<h2 class="text-3xl font-bold text-center mb-12 text-gray-800">Contact Us</h2>
+<div class="flex flex-col lg:flex-row gap-10">
+<!-- Contact Form -->
+<div class="lg:w-1/2 bg-white p-8 rounded shadow-md">
+<h3 class="text-2xl font-semibold mb-6 text-gray-700">Send Us a Message</h3>
+<form>
+<div class="mb-4">
+<label for="name" class="block text-gray-700 mb-2">Full Name</label>
+<input type="text" id="name" class="w-full px-4 py-2 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent" placeholder="Your name">
+</div>
+<div class="mb-4">
+<label for="email" class="block text-gray-700 mb-2">Email Address</label>
+<input type="email" id="email" class="w-full px-4 py-2 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent" placeholder="Your email">
+</div>
+<div class="mb-4">
+<label for="subject" class="block text-gray-700 mb-2">Subject</label>
+<input type="text" id="subject" class="w-full px-4 py-2 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent" placeholder="Message subject">
+</div>
+<div class="mb-6">
+<label for="message" class="block text-gray-700 mb-2">Message</label>
+<textarea id="message" rows="5" class="w-full px-4 py-2 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent" placeholder="Your message"></textarea>
+</div>
+<button type="submit" class="bg-primary hover:bg-blue-600 text-white font-bold py-3 px-6 !rounded-button transition duration-300 whitespace-nowrap">Send Message</button>
+</form>
+</div>
+<!-- Contact Information -->
+<div class="lg:w-1/2">
+<div class="bg-white p-8 rounded shadow-md mb-8">
+<h3 class="text-2xl font-semibold mb-6 text-gray-700">Contact Information</h3>
+<div class="space-y-4">
+<div class="flex items-start">
+<div class="w-10 h-10 flex items-center justify-center bg-primary/10 rounded-full mr-4">
+<i class="ri-map-pin-line text-primary"></i>
+</div>
+<div>
+<h4 class="font-medium text-gray-700">Address</h4>
+<p class="text-gray-600">Municipal Hall, R.V. Briones St., Bogo City, Cebu 6010, Philippines</p>
+</div>
+</div>
+<div class="flex items-start">
+<div class="w-10 h-10 flex items-center justify-center bg-primary/10 rounded-full mr-4">
+<i class="ri-phone-line text-primary"></i>
+</div>
+<div>
+<h4 class="font-medium text-gray-700">Phone</h4>
+<p class="text-gray-600">+63 (32) 251-2016</p>
+</div>
+</div>
+<div class="flex items-start">
+<div class="w-10 h-10 flex items-center justify-center bg-primary/10 rounded-full mr-4">
+<i class="ri-mail-line text-primary"></i>
+</div>
+<div>
+<h4 class="font-medium text-gray-700">Email</h4>
+<p class="text-gray-600">info@bogocity.gov.ph</p>
+</div>
+</div>
+<div class="flex items-start">
+<div class="w-10 h-10 flex items-center justify-center bg-primary/10 rounded-full mr-4">
+<i class="ri-time-line text-primary"></i>
+</div>
+<div>
+<h4 class="font-medium text-gray-700">Office Hours</h4>
+<p class="text-gray-600">Monday to Friday: 8:00 AM - 5:00 PM</p>
+</div>
+</div>
+</div>
+<div class="mt-8">
+<h4 class="font-medium text-gray-700 mb-3">Follow Us</h4>
+<div class="flex space-x-3">
+<a href="#" class="w-10 h-10 flex items-center justify-center bg-primary/10 rounded-full hover:bg-primary hover:text-white transition duration-300">
+<i class="ri-facebook-fill"></i>
+</a>
+<a href="#" class="w-10 h-10 flex items-center justify-center bg-primary/10 rounded-full hover:bg-primary hover:text-white transition duration-300">
+<i class="ri-twitter-fill"></i>
+</a>
+<a href="#" class="w-10 h-10 flex items-center justify-center bg-primary/10 rounded-full hover:bg-primary hover:text-white transition duration-300">
+<i class="ri-instagram-line"></i>
+</a>
+<a href="#" class="w-10 h-10 flex items-center justify-center bg-primary/10 rounded-full hover:bg-primary hover:text-white transition duration-300">
+<i class="ri-youtube-line"></i>
+</a>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+
+<footer class="bg-gray-800 text-white py-12">
+<div class="container mx-auto px-4">
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+<!-- Column 1 -->
+<div>
+<h3 class="font-['Pacifico'] text-2xl mb-4">Bogo ko</h3>
+<p class="text-gray-400 mb-4">The Municipality of Bogo is committed to providing excellent service to its citizens and promoting sustainable development for all.</p>
+</div>
+<!-- Column 2 -->
+<div>
+<h4 class="text-lg font-semibold mb-4">Quick Links</h4>
+<ul class="space-y-2">
+<li><a href="#home" class="text-gray-400 hover:text-white transition duration-300">Home</a></li>
+<li><a href="#about" class="text-gray-400 hover:text-white transition duration-300">About</a></li>
+<li><a href="#services" class="text-gray-400 hover:text-white transition duration-300">Official</a></li>
+<li><a href="#news" class="text-gray-400 hover:text-white transition duration-300">News</a></li>
+<li><a href="#contact" class="text-gray-400 hover:text-white transition duration-300">Contact</a></li>
+</ul>
+</div>
+<!-- Column 3 -->
+<div>
+<h4 class="text-lg font-semibold mb-4">Important Links</h4>
+<ul class="space-y-2">
+<li><a href="#" class="text-gray-400 hover:text-white transition duration-300">Transparency Portal</a></li>
+<li><a href="#" class="text-gray-400 hover:text-white transition duration-300">Citizen's Charter</a></li>
+<li><a href="#" class="text-gray-400 hover:text-white transition duration-300">Bids and Awards</a></li>
+<li><a href="#" class="text-gray-400 hover:text-white transition duration-300">Careers</a></li>
+<li><a href="#" class="text-gray-400 hover:text-white transition duration-300">Privacy Policy</a></li>
+</ul>
+</div>
+<!-- Column 4 -->
+<div>
+<h4 class="text-lg font-semibold mb-4">Newsletter</h4>
+<p class="text-gray-400 mb-4">Subscribe to our newsletter to receive updates on municipal activities and announcements.</p>
+<form class="flex">
+<input type="email" placeholder="Your email" class="px-4 py-2 w-full border-none rounded-l focus:outline-none text-gray-800">
+<button type="submit" class="bg-primary hover:bg-blue-600 px-4 py-2 !rounded-r-button whitespace-nowrap transition duration-300">Subscribe</button>
+</form>
+</div>
+</div>
+<div class="border-t border-gray-700 mt-10 pt-6 flex flex-col md:flex-row justify-between items-center">
+<p class="text-gray-400 text-sm mb-4 md:mb-0">© 2025 Municipality of Bogo, Cebu. All rights reserved.</p>
+<div class="flex space-x-4">
+<a href="#" class="text-gray-400 hover:text-white transition duration-300">
+<i class="ri-facebook-fill"></i>
+</a>
+<a href="#" class="text-gray-400 hover:text-white transition duration-300">
+<i class="ri-twitter-fill"></i>
+</a>
+<a href="#" class="text-gray-400 hover:text-white transition duration-300">
+<i class="ri-instagram-line"></i>
+</a>
+<a href="#" class="text-gray-400 hover:text-white transition duration-300">
+<i class="ri-youtube-line"></i>
+</a>
+</div>
+</div>
+</div>
+</footer>
+<!-- Back to Top Button -->
+<button id="back-to-top" class="fixed bottom-6 right-6 w-12 h-12 bg-primary text-white rounded-full shadow-lg flex items-center justify-center opacity-0 invisible transition-all duration-300">
+<i class="ri-arrow-up-line ri-lg"></i>
+</button>
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+// Mobile Menu Toggle
+const mobileMenuButton = document.querySelector('.mobile-menu-button');
+const closeMenuButton = document.querySelector('.close-menu');
+const mobileMenu = document.querySelector('.mobile-menu');
+mobileMenuButton.addEventListener('click', function() {
+mobileMenu.classList.add('active');
+});
+closeMenuButton.addEventListener('click', function() {
+mobileMenu.classList.remove('active');
+});
+// Mobile Menu Links (close menu when clicked)
+const mobileMenuLinks = document.querySelectorAll('.mobile-menu a');
+mobileMenuLinks.forEach(link => {
+link.addEventListener('click', function() {
+mobileMenu.classList.remove('active');
+});
+});
+});
+document.addEventListener('DOMContentLoaded', function() {
+// Back to Top Button
+const backToTopButton = document.getElementById('back-to-top');
+window.addEventListener('scroll', function() {
+if (window.pageYOffset > 300) {
+backToTopButton.classList.remove('opacity-0', 'invisible');
+backToTopButton.classList.add('opacity-100', 'visible');
+} else {
+backToTopButton.classList.remove('opacity-100', 'visible');
+backToTopButton.classList.add('opacity-0', 'invisible');
+}
+});
+backToTopButton.addEventListener('click', function() {
+window.scrollTo({
+top: 0,
+behavior: 'smooth'
+});
+});
+});
+document.addEventListener('DOMContentLoaded', function() {
+// Smooth Scrolling for Anchor Links
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+anchor.addEventListener('click', function(e) {
+e.preventDefault();
+const targetId = this.getAttribute('href');
+if (targetId === '#') return;
+const targetElement = document.querySelector(targetId);
+if (targetElement) {
+const headerOffset = 80;
+const elementPosition = targetElement.getBoundingClientRect().top;
+const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
+window.scrollTo({
+top: offsetPosition,
+behavior: 'smooth'
+});
+}
+});
+});
+});
+</script>
+</body>
+</html>

@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: Arial, sans-serif;
+    }
+    body {
+      background-color: #000000;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 100vh;
+      color: #fff;
+      padding: 20px;
+    }
+    .login-container {
+      position: relative;
+      width: 100%;
+      max-width: 350px;
+      padding: 40px 30px;
+      text-align: center;
+      border-radius: 20px;
+      background-color: #111111;
+      overflow: hidden;
+      box-shadow: 0 0 20px rgba(255, 255, 255, 0.1);
+    }
+    .login-container::before {
+      content: "";
+      position: absolute;
+      top: -30px;
+      left: -30px;
+      width: 360px;
+      height: 360px;
+      border-radius: 50%;
+      background: conic-gradient(#00CED1, #20B2AA, #00CED1);
+      animation: spin 6s linear infinite;
+      z-index: -1;
+      opacity: 0.1;
+    }
+    @keyframes spin {
+      0% { transform: rotate(0); }
+      100% { transform: rotate(360deg); }
+    }
+    .logo-container {
+      width: 100%;
+      text-align: center;
+      margin-bottom: 20px;
+    }
+    .logo {
+      width: 100px;
+      height: 100px;
+      margin-bottom: 20px;
+      object-fit: cover;
+      border-radius: 50%;
+      background-color: #222;
+      padding: 10px;
+      border: 2px solid #00CED1;
+    }
+    h2 {
+      margin-bottom: 20px;
+      color: #00CED1;
+    }
+    input[type="text"], input[type="password"] {
+      width: 100%;
+      padding: 12px;
+      margin: 10px 0;
+      border-radius: 25px;
+      border: 1px solid #00CED1;
+      text-align: center;
+      background-color: #222222;
+      color: #fff;
+    }
+    .btn {
+      background: linear-gradient(to right, #00CED1, #20B2AA);
+      padding: 12px;
+      border: none;
+      width: 100%;
+      border-radius: 25px;
+      color: #ffffff;
+      font-weight: bold;
+      margin: 15px 0;
+      cursor: pointer;
+      transition: all 0.3s ease;
+    }
+    .btn:hover {
+      background: linear-gradient(to right, #20B2AA, #00CED1);
+    }
+    .links {
+      display: flex;
+      justify-content: center;
+      font-size: 0.9em;
+      margin-top: 10px;
+    }
+    .links a {
+      color: #00CED1;
+      text-decoration: none;
+    }
+    .links a:hover {
+      text-decoration: underline;
+      color: #7FFFD4;
+    }
+    .error {
+      color: #ff5555;
+      font-size: 0.9em;
+      margin-top: 10px;
+    }
+    .success {
+      color: #88ff88;
+      font-size: 0.9em;
+      margin-top: 10px;
+    }
+    
+  
+    @media screen and (max-width: 480px) {
+      .login-container {
+        padding: 30px 20px;
+      }
+      .logo {
+        width: 80px;
+        height: 80px;
+      }
+      h2 {
+        font-size: 1.5rem;
+      }
+      input[type="text"], input[type="password"] {
+        padding: 10px;
+      }
+      .btn {
+        padding: 10px;
+      }
+      .links {
+        font-size: 0.8em;
+      }
+    }
+    
+  
+    @media screen and (max-width: 320px) {
+      .login-container {
+        padding: 20px 15px;
+      }
+      .logo {
+        width: 70px;
+        height: 70px;
+      }
+      h2 {
+        font-size: 1.3rem;
+        margin-bottom: 15px;
+      }
+    }
+    
+
+    @media screen and (min-width: 768px) {
+      .login-container {
+        max-width: 400px;
+        padding: 50px 40px;
+      }
+      .logo {
+        width: 120px;
+        height: 120px;
+      }
+      h2 {
+        font-size: 2rem;
+      }
+      input[type="text"], input[type="password"] {
+        padding: 14px;
+        margin: 12px 0;
+      }
+      .btn {
+        padding: 14px;
+      }
+      .links {
+        font-size: 1em;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="login-container">
+    <div class="logo-container">
+      <img src="logo.jpg" alt="Logo" class="logo">
+    </div>
+    <h2>Login</h2>
+    <input type="text" id="username" placeholder="Username">
+    <input type="password" id="password" placeholder="Password">
+    <button class="btn" onclick="login()">Login</button>
+    <div class="links">
+      <a href="#">Forgot Password</a>
+    </div>
+    <div id="message"></div>
+  </div>
+  <script>
+    function login() {
+      const username = document.getElementById("username").value.trim();
+      const password = document.getElementById("password").value.trim();
+      const message = document.getElementById("message");
+      const validUsername = "Soner";
+      const validPassword = "Claire06";
+      if (!username || !password) {
+        message.innerHTML = "<p class='error'>Please fill in both fields.</p>";
+      } else if (username === validUsername && password === validPassword) {
+        message.innerHTML = "<p class='success'>Login successful! Redirecting...</p>";
+        setTimeout(function() {
+          window.location.href = "menu.html";
+        }, 1000);
+      } else {
+        message.innerHTML = "<p class='error'>Incorrect username or password.</p>";
+      }
+    }
+    
+   
+    document.addEventListener("keypress", function(event) {
+      if (event.key === "Enter") {
+        login();
+      }
+    });
+  </script>
+</body>
+</html>
